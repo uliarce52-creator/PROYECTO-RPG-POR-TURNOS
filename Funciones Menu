@@ -1,0 +1,88 @@
+# FUNCIONES PARA EL RPG
+
+import time
+
+def menu():
+	print(" ---- CHOOSE YOUR WEAPON ---- ")
+	print("1. Espada  ⚔️ ")
+	print("2. Baculo  💫 ")
+	opcion = int(input("Elija una de las dos: "))
+	return opcion
+
+def escribir(texto):
+
+    for letra in texto:
+        print(letra, end="")
+        time.sleep(0.05)
+
+    print()
+
+def eleccion(opcion):
+	if opcion == 1:
+		escribir("""
+		Una antigua espada forjada en tiempos olvidados.
+		Su acero ha sobrevivido a innumerables guerras y aún conserva el poder de
+		derrotar a los enemigos más temibles.
+		""")
+	elif opcion ==2:
+		escribir("""
+		Un sencillo báculo utilizado por aprendices de magia.
+		Aunque su poder es modesto
+		es el primer paso en el camino de todo gran mago.
+		""")
+		
+def menu_avanzar():
+	escribir("""
+	Tras varias horas de viaje, llegas a un cruce de caminos.
+	A tu izquierda, el bosque se vuelve más denso y oscuro.
+	Frente a ti, unas ruinas antiguas emergen de la niebla.
+	A tu derecha, una tenue luz parece provenir de una cabaña.
+	""")
+	print("[1] Izquierda")
+	print("[2] Centro")
+	print("[3] Derecha")
+	opcion2 = int(input("¿Hacia dónde deseas avanzar?:  "))
+	return opcion2
+	
+def seleccion_avanzar(opcion2):
+	if opcion2 == 1:
+		escribir("""
+		Te adentras entre los árboles.
+		El bosque se vuelve cada vez más silencioso.
+		Escuchas ramas romperse detrás de ti.
+		
+		Te detienes.
+		
+		Dos ojos amarillos aparecen entre la oscuridad.
+		
+		Un enorme LOBO SALVAJE salta frente a ti mostrando los colmillos.
+		
+		-----  🛡️ !COMIENZA EL COMBATE!  🛡️ -----
+		""")
+		
+	elif opcion2 == 2:
+		escribir("""
+		Avanzas por el camino de piedra.
+		Las ruinas parecen abandonadas…
+		hasta que el suelo empieza a temblar.
+			
+		Fragmentos de roca comienzan a unirse.
+			
+		Ante ti se levanta un GUARDIÁN DE PIEDRA.
+			
+		Sus ojos brillan de color azul.
+		
+		-----  🛡️ !COMIENZA EL COMBATE!  🛡️ -----
+		""")
+		
+	elif opcion2 == 3:
+		escribir("""
+		Te acercas a la cabaña.
+		La puerta está abierta.
+		Cuando entras, una figura sale de las sombras.
+		
+		— Entrega todo lo que llevas.
+		Un BANDIDO desenfunda una daga y bloquea la salida.
+		
+		-----  🛡️ !COMIENZA EL COMBATE!  🛡️ -----
+		""")
