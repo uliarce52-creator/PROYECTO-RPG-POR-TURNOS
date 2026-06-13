@@ -1,8 +1,7 @@
 from funcionesrpg import *
-import random
+from funcionesbatalla import *
 
 opcion = menu()
 eleccion(opcion)
-
 avanzar = menu_avanzar()
 seleccion_avanzar(avanzar)
